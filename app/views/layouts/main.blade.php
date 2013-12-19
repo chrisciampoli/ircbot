@@ -31,21 +31,6 @@
           </div><!--/.nav-collapse -->
         </div>
       </div>
-      
-      
-      
-      
-      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="navbar-inner">
-         <div class="container">
-            <ul class="nav">  
-               <li>{{ HTML::link('users/register', 'Register') }}</li>   
-               <li>{{ HTML::link('users/login', 'Login') }}</li>   
-            </ul>  
-         </div>
-      </div>
-   </div>
-      
     <div class="container">
       @if(Session::has('message'))
          <p class="alert">{{ Session::get('message') }}</p>
