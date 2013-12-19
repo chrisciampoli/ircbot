@@ -9,7 +9,7 @@
   </head>
  
   <body>
-      <div class="navbar navbar-fixed-top">
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="navbar-inner">
          <div class="container">
             <ul class="nav">  
