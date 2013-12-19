@@ -25,7 +25,8 @@
             <ul class="nav navbar-nav">
               <li class="active"><a href="#">Home</a></li>
               <li>{{ HTML::link('users/register', 'Register') }}</li>   
-              <li>{{ HTML::link('users/login', 'Login') }}</li>   
+              <li>{{ HTML::link('users/login', 'Login') }}</li>
+              <li>TESTTEST</li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
