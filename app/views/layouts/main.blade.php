@@ -23,8 +23,12 @@
           </div>
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-              <li class="active">{{ HTML::link('users/register', 'Register') }}</li>   
-              <li>{{ HTML::link('users/login', 'Login') }}</li>
+                @if(!Auth::check())
+                    <li>{{ HTML::link('users/register', 'Register') }}</li>   
+                    <li>{{ HTML::link('users/login', 'Login') }}</li>   
+                @else
+                    <li>{{ HTML::link('users/logout', 'logout') }}</li>
+                @endif
             </ul>
           </div><!--/.nav-collapse -->
         </div>
