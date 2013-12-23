@@ -9,6 +9,15 @@ class UsersController extends BaseController {
     
     protected $layout = "layouts.main";
     
+    
+    public function __construct() {
+        $this->beforeFilter('csrf', array('on'=>'post'));
+    }
+    
+    public function getLogin() {
+        $this->layout->content = View::make('users.login');
+    }
+    
     public function getRegister() {
         $this->layout->content = View::make('users.register');
     }
@@ -28,8 +37,12 @@ class UsersController extends BaseController {
             $user->password = Hash::make(Input::get('password'));
             $user->save(); // LEFT OFF HERE
             
+            return Redirect::to('users/login')->with('message', 'You are now registered, thank you!');
+            
         } else {
-            // failed show em errors
+            
+            return Redirect::to('users/register')->with('message', 'The following errors occured')->withErrors($validator)->withInput();
+            
         }
         
     }

@@ -17,3 +17,5 @@ Route::get('/', function()
 });
 
 Route::controller('users', 'UsersController');
+
+Route::controller('ircbot','BotController');
