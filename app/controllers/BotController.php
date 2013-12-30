@@ -13,11 +13,11 @@
 class BotController extends BaseController {
     
     public function __construct() {
-        parent::__construct();
+        
     }
     
     public function getIndex() {
-        echo 'Welcome to botland';
+        return 'Welcome to botland';
     }
     
 }
