@@ -12,9 +12,7 @@
  */
 class BotController extends BaseController {
     
-    public function __construct() {
-        
-    }
+    protected $layout = "layouts.main";
     
     public function getIndex() {
         return 'Welcome to botland';
