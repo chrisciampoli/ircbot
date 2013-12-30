@@ -15,7 +15,7 @@ class BotController extends BaseController {
     protected $layout = "layouts.main";
     
     public function getIndex() {
-        return 'Welcome to botland';
+        $this->layout->content = View::make('users.dashboard');
     }
     
 }
